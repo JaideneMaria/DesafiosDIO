@@ -30,12 +30,11 @@ while True:
 
     elif opcao == "s":
       valor_do_saque = int(input("Digite o valor do saque: "))
-      if valor_do_saque <= saldo:
+      if valor_do_saque <= saldo and valor_do_saque > 0:
         if valor_do_saque <= limite:
           if numero_saques < LIMITE_SAQUES:
             numero_saques += 1
             saldo -= valor_do_saque
-            print(numero_saques)
             extrato += f"SAQUE: R${valor_do_saque:.2f}\n"
             print("Contagem de notas...")
             time.sleep(3)
